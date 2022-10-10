@@ -90,13 +90,14 @@ const darkTheme = createTheme({
       <Head>
         <title>Only Cheeini</title>
         <meta name="description" content="Full Stack Developer" />
-          <meta property="og:site_name" content="Only Cheeini"/>
+          <meta name="og:site_name" content="Only Cheeini"/>
           <meta property="og:image" content={`https://cdn.discordapp.com/avatars/${(user.discord_user) ? user.discord_user.id : configDc.userId}/${(user.discord_user) ? user.discord_user.avatar : "1"}.png?size=4096`}/>
         <link rel="icon" href={`https://cdn.discordapp.com/avatars/${(user.discord_user) ? user.discord_user.id : configDc.userId}/${(user.discord_user) ? user.discord_user.avatar : "1"}.png?size=4096`} />
       </Head>
 </div>
   <br/>
           <noscript>Lütfen JavaScript Ayarlarınızı Aktif Hale Getirin!</noscript>
+          
     <Container xl responsive>
       <Card css={{ $$cardColor: '$colors$gradient' }} size="2xl">
         <Card.Body>
