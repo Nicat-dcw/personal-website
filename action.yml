@@ -1,0 +1,6 @@
+ name: Discord notification
+  env:
+    DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+  uses: Nicat-dcw/personal-website
+  with:
+    args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed.'
