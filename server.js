@@ -1,5 +1,6 @@
 import express from 'express';
 import next from 'next';
+import helmet from "helmet";
 import chalk from 'chalk'
 const app = express();
 
@@ -14,7 +15,8 @@ nextApp.prepare().then(() => {
   app.get("/custom-route", (req, res) => {
     res.send("Custom Route!!")
   })
-
+app.use(helmet());
+app.use(helmet.xssFilter());
   app.get("*", nextHandler)
   app.post('*', nextHandler)
 
